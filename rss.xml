@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>YC Blog</title>
+    <link>https://oldboyyyy.github.io/</link>
+    <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>小白的大牛梦！</description>
+    <pubDate>Tue, 14 Mar 2017 12:01:06 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>正则表达式用法记录</title>
+      <link>https://oldboyyyy.github.io/2017/03/14/reg/</link>
+      <guid>https://oldboyyyy.github.io/2017/03/14/reg/</guid>
+      <pubDate>Tue, 14 Mar 2017 11:47:58 GMT</pubDate>
+      <description>
+      
+        &lt;h4 id=&quot;正则是干什么的&quot;&gt;&lt;a href=&quot;#正则是干什么的&quot; class=&quot;headerlink&quot; title=&quot;正则是干什么的&quot;&gt;&lt;/a&gt;正则是干什么的&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;正则是一种规则，用来匹配和捕获字符串的规则。&lt;/p&gt;
+&lt;p&gt;&lt;more&gt;&lt;/p&gt;
+&lt;h4 id=&quot;正则的规则&quot;&gt;&lt;a href=&quot;#正则的规则&quot; class=&quot;headerlink&quot; title=&quot;正则的规则&quot;&gt;&lt;/a&gt;正则的规则&lt;/h4&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;元字符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;元字符&lt;/th&gt;
+&lt;th&gt;对应说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;.&lt;/td&gt;
+&lt;td&gt;匹配除换行符之外的任意字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;\w&lt;/td&gt;
+&lt;td&gt;匹配字母数字下划线，等同于：[a-zA-Z0-9_]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;\s&lt;/td&gt;
+&lt;td&gt;匹配任意空白符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;\d&lt;/td&gt;
+&lt;td&gt;匹配数字，等同于[0-9]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;\b&lt;/td&gt;
+&lt;td&gt;匹配单词边界&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;^&lt;/td&gt;
+&lt;td&gt;匹配字符串的开始&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$&lt;/td&gt;
+&lt;td&gt;匹配字符串的结束&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;还有一个 |    或匹配，如 /x|y/ 正则可匹配x或y两个字符（ps: 与markdown的表格语法冲突）&lt;/p&gt;
+&lt;/blockquote&gt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h4 id="正则是干什么的"><a href="#正则是干什么的" class="headerlink" title="正则是干什么的"></a>正则是干什么的</h4><blockquote>
+<p>正则是一种规则，用来匹配和捕获字符串的规则。</p>
+<p><more></more></p>
+<h4 id="正则的规则"><a href="#正则的规则" class="headerlink" title="正则的规则"></a>正则的规则</h4></blockquote>
+<ul>
+<li>元字符</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>元字符</th>
+<th>对应说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.</td>
+<td>匹配除换行符之外的任意字符</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>匹配字母数字下划线，等同于：[a-zA-Z0-9_]</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>匹配任意空白符</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>匹配数字，等同于[0-9]</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>匹配单词边界</td>
+</tr>
+<tr>
+<td>^</td>
+<td>匹配字符串的开始</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配字符串的结束</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>还有一个 |    或匹配，如 /x|y/ 正则可匹配x或y两个字符（ps: 与markdown的表格语法冲突）</p>
+</blockquote>
+<a id="more"></a>
+<ul>
+<li>反义字符</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>反义字符</th>
+<th>对应说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[^x]</td>
+<td>匹配除“x”之外的所有字符，其中“x”可以为任意字符</td>
+</tr>
+<tr>
+<td>[^zyx]</td>
+<td>同上，匹配除“x、y、z”之外的任意字符</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>匹配除了字母、数字、下划线之外的所有字符，等同于：[^\w]</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>匹配除空白符之外的任意字符，等同于：[^\s]</td>
+</tr>
+<tr>
+<td>\B</td>
+<td>匹配不是单词边界的字符，等同于：[^\b]</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>匹配不是数字的所有字符，等同于：[^\d]</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>转义字符</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>转义字符</th>
+<th>对应说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\xnn</td>
+<td>匹配十六进制数</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>匹配换页符，等同于：\x0c</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>匹配换行符，等同于：\x0a</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>匹配回车符，等同于：\x0d</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>匹配水平制表符，等同于：\x09</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>匹配垂直制表符，等同于：\x0b</td>
+</tr>
+<tr>
+<td>\unnnn</td>
+<td>匹配Unicode字符，如：\u00A0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>重复匹配</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>匹配字符</th>
+<th>对应说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>重复出现零次或多次</td>
+</tr>
+<tr>
+<td>+</td>
+<td>重复出现一次或多次</td>
+</tr>
+<tr>
+<td>?</td>
+<td>重复出现零次或一次</td>
+</tr>
+<tr>
+<td>{n}</td>
+<td>重复出现n次</td>
+</tr>
+<tr>
+<td>{n,}</td>
+<td>至少重复出现n次</td>
+</tr>
+<tr>
+<td>{m,n}</td>
+<td>重复重现m到n次，其中，m&lt;n</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>分组/捕获</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>分组字符串</th>
+<th>对应说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(exp)</td>
+<td>用小圆括号进行分组，如日期中年月日的分组：/(\d{5})-(\d{1,2})-(\d{1,2})/每个分组将产生分组号，从第一个括号开始，可以使用\n的形式在正则中使用分组号，如匹配成对出现的HTML标签，可以写成：/&lt;(\w+)&gt;&lt;\/\1&gt;/</td>
+</tr>
+<tr>
+<td>(?:exp)</td>
+<td>匹配exp正则，但不产生分组号</td>
+</tr>
+<tr>
+<td>exp1(?=exp2)</td>
+<td>前瞻断言，匹配exp1，但后面必须是exp2如匹配名字叫xianlie，但不姓zhao的人：/zhao(?=xianlie)/</td>
+</tr>
+<tr>
+<td>exp1(?!=exp2)</td>
+<td>后瞻断言，匹配exp1，但后面不能是exp2如匹配姓zhao，但名字不叫xianlie的人：/zhao(?!xianlie)/</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>贪婪与惰性</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>相关字符</th>
+<th>对应说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*?</td>
+<td>重复任意次，但尽可能少的重复</td>
+</tr>
+<tr>
+<td>+?</td>
+<td>重复一次或多次，但尽可能少的重复</td>
+</tr>
+<tr>
+<td>??</td>
+<td>重复零次或一次，但尽可能少的重复</td>
+</tr>
+<tr>
+<td>{m,n}?</td>
+<td>重复m到n次，但尽可能少的重复</td>
+</tr>
+<tr>
+<td>{n,}?</td>
+<td>重复n次以上，但尽可能少的重复</td>
+</tr>
+<tr>
+<td>{n}?</td>
+<td>重复n次，但尽可能少的重复</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>修饰符</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>对应说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>i</td>
+<td>ignoreCase的缩写，表示忽略字母的大小写</td>
+</tr>
+<tr>
+<td>m</td>
+<td>multiline的缩写，更改^和$的含义，使它们分别在任意一行的行首和行尾匹配，而不仅仅在整个字符串的开头和结尾匹配。(在此模式下,$的精确含意是:匹配\n之前的位置以及字符串结束前的位置.)</td>
+</tr>
+<tr>
+<td>g</td>
+<td>global的缩写，进行全局匹配，即对字符串进行全文匹配，直到字符串遍历束</td>
+</tr>
+</tbody>
+</table>
+<h4 id="如任何创建正则表达式"><a href="#如任何创建正则表达式" class="headerlink" title="如任何创建正则表达式"></a>如任何创建正则表达式</h4><p>1.字面量创建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var reg = /\w/</div></pre></td></tr></table></figure>
+<p>2.实例方式创建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var reg = new RegExp(&apos;/\w/&apos;)</div></pre></td></tr></table></figure>
+<p><strong><em>两者的区别</em></strong><br>假设现在需要动态匹配字符串，也就是匹配的内容不固定。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var name = &apos;iceman&apos;;</div><div class="line">var reg = /^\d+&quot;+name+&quot;\d+$/;</div><div class="line">console.log(reg.test(&apos;2015iceman2016&apos;)); // false</div><div class="line">console.log(reg.test(&apos;2015&quot;&quot;&quot;nameeee&quot;2016&apos;)); // true</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var name = &apos;iceman&apos;;</div><div class="line">var reg = new RegExp(&quot;^\\d+&quot; + name + &quot;\\d+$&quot;, &quot;g&quot;);</div><div class="line">console.log(reg.test(&apos;2015iceman2016&apos;)); // true</div></pre></td></tr></table></figure>
+<blockquote>
+<p>1.字面量方式中出现的一切都是元字符，不能进行变量值的拼接，而实例创建的方式可以；<br>2.字面量方式中直接写\d可以，而在实例中需要把它转义 \d</p>
+</blockquote>
+<h4 id="正则用法"><a href="#正则用法" class="headerlink" title="正则用法"></a>正则用法</h4><p>1.匹配一字母开头，数字的结尾的任意字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var reg = /^[a-z].\d$/;reg.test(&apos;a551&apos;) //false 中间只能有一个任意字符</div><div class="line">var reg = /^[a-z].\d$/;reg.test(&apos;a55&apos;) //true</div><div class="line">var reg = /^[a-z].*\d$/;reg.test(&apos;a5sdsd5&apos;) // true *代表中的部分重复出现零次或多次</div><div class="line">var reg = /^[a-z|A-Z].*\d$/;reg.test(&apos;a5sdsd5&apos;) //true</div><div class="line">var reg = /^[a-z|A-Z].*\d$/;reg.test(&apos;A5sdsd5&apos;) //true</div><div class="line">var reg = /^[a-z].*\d$/i;reg.test(&apos;A5sdsd5&apos;) // true 修饰词i，忽略大小写</div></pre></td></tr></table></figure>
+<p>2.匹配有效数字，正负数，整数，小数，零</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/^[+-]?(\d|([1-9]\d+))(\.\d+)?$/.test(&apos;1.&apos;)//fale</div></pre></td></tr></table></figure>
+<p>3.匹配18-56的数字</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/^([1][8-9]|[2-4]\d)|[5][0-6]$/.test(&apos;25&apos;) //true</div></pre></td></tr></table></figure>
+<p>4.exec方法</p>
+<blockquote>
+<p>正则表达式默认有一个lastIndex字段，该字段是正则每一次捕获时，在字符串中开始查询的位置，默认的值是0；</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">console.log(/([1][8-9]|[2-4]\d)|[5][0-6]/.exec(&apos;aaaa25cccc&apos;));</div><div class="line">//[&quot;25&quot;, &quot;25&quot;, index: 4, input: &quot;aaaa25cccc&quot;]</div></pre></td></tr></table></figure>
+<p>exec方法会返回一个数组</p>
+<ul>
+<li>数组第一项是正则匹配到的字符串</li>
+<li>有一个index项，捕获字符串的索引位置</li>
+<li>有一个input项，捕获的原字符串</li>
+</ul>
+<p>5.match方法</p>
+<blockquote>
+<p>把所有的符合的匹配的字符串获取到</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;aaaa25cccc35&apos;.match(/([1][8-9]|[2-4]\d)|[5][0-6]/g);</div><div class="line">//[&quot;25&quot;, &quot;35&quot;]</div></pre></td></tr></table></figure>
+<p>6.replace 方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var str = &apos;今年是2017年&apos;;</div><div class="line">var ary = [&apos;零&apos;, &apos;壹&apos;, &apos;贰&apos;, &apos;叁&apos;, &apos;肆&apos;, &apos;伍&apos;, &apos;陆&apos;,&apos;柒&apos;, &apos;捌&apos;, &apos;玖&apos;, &apos;拾&apos;];</div><div class="line">str = str.replace(/\d/g, function () &#123;</div><div class="line">    /*</div><div class="line">     * 第一次执行：大正则捕获的是2，返回的是ary[2] --&gt; &apos;贰&apos;</div><div class="line">     * 第二次执行：大正则捕获的是0，返回的是ary[0] --&gt; &apos;零&apos;</div><div class="line">     * .....</div><div class="line">     */</div><div class="line">    return ary[arguments[0]];</div><div class="line">&#125;);</div><div class="line">console.log(str);</div></pre></td></tr></table></figure>
+<h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><p>1.<a href="http://mp.weixin.qq.com/s?__biz=MzI0ODA2ODU2NQ==&amp;mid=2651131481&amp;idx=1&amp;sn=270714903bdf5d21d20ccfc950f2f4cb&amp;chksm=f257cee3c52047f53eb9b9437284036ebe963066f487405cbe078010ac3100c4c8b07c521fca&amp;mpshare=1&amp;scene=23&amp;srcid=0314sWWuSMu6xGlLbJIQ1kbo#rd" target="_blank" rel="external">正则详解及实战（JavaScript）</a><br>2.<a href="http://www.jianshu.com/p/4edfac6232ca#" target="_blank" rel="external">2017百度前端技术学院- 正则表达式之入门</a></p>
+]]></content:encoded>
+      
+      <comments>https://oldboyyyy.github.io/2017/03/14/reg/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Git常用命令记录</title>
+      <link>https://oldboyyyy.github.io/2017/03/13/git/</link>
+      <guid>https://oldboyyyy.github.io/2017/03/13/git/</guid>
+      <pubDate>Mon, 13 Mar 2017 12:43:40 GMT</pubDate>
+      <description>
+      
+        &lt;blockquote&gt;
+&lt;p&gt;记录常用的git操作命令&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;创建提交版本库&quot;&gt;&lt;a href=&quot;#创建提交版本库&quot; class=&quot;headerlink&quot; title=&quot;创建提交版本库&quot;&gt;&lt;/a&gt;创建提交版本库&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;创建版本库&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git init&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将文件添加到暂存区里面去&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git add &amp;lt;文件名或文件夹&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;git add -A  //提交所有变化&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;git add -u //提交被修改的和被删除的文件，不包括新文件&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;git add . //提交新文件和被修改的文件，不包括被删除的文件&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<blockquote>
+<p>记录常用的git操作命令</p>
+</blockquote>
+<h3 id="创建提交版本库"><a href="#创建提交版本库" class="headerlink" title="创建提交版本库"></a>创建提交版本库</h3><ol>
+<li><p>创建版本库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init</div></pre></td></tr></table></figure>
+</li>
+<li><p>将文件添加到暂存区里面去</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git add &lt;文件名或文件夹&gt;</div><div class="line">git add -A  //提交所有变化</div><div class="line">git add -u //提交被修改的和被删除的文件，不包括新文件</div><div class="line">git add . //提交新文件和被修改的文件，不包括被删除的文件</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<a id="more"></a>
+<ol>
+<li><p>把暂存区的文件提交到仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit -m &apos;这次提交的备注&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看文件是否还有未提交</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git status</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看文件具体修改了哪些内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git diff &lt;要查看的文件名称&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ol>
+<li><p>查看修改文件的修改记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git log //内容信息比较丰富</div><div class="line">git log --pretty=oneline //将信息集中到一行，去除了一些信息</div></pre></td></tr></table></figure>
+</li>
+<li><p>版本回退操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git reset --hard HEAD^ //回退上一个版本</div><div class="line">git reset --hard HEAD^^ //回退上上一个版本，以此类推，如果回退100个版本，就很麻烦</div><div class="line">git reset --hard HEAD~100 // 也可以这样来操作</div></pre></td></tr></table></figure>
+</li>
+<li><p>通过命令查看文件内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat &lt;文件名称&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看内容的版本号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git reflog</div><div class="line">git rest --hard &lt;你想回退的版本号&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="撤销修改和删除文件"><a href="#撤销修改和删除文件" class="headerlink" title="撤销修改和删除文件"></a>撤销修改和删除文件</h3><ol>
+<li><p>未提交之前发现有错误，要恢复以前版本</p>
+<ul>
+<li>手动修改错误文件，重新add到暂存区</li>
+<li>使用<code>git reset --hard HEAD^</code>恢复上一个版本</li>
+<li>使用撤销命令操作，如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -- &lt;文件名&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>git checkout</code>把文件在工作区的修改全部撤销，这里有两种情况，如下：</p>
+<ol>
+<li>文件自动修改以后，还没放到暂存区，使用撤销修改就回到和版本库一模一样的状态。</li>
+<li>另一种，文件修改以后并且也已经放入暂存区，接着又作了修改，撤销修改就回到了添加暂存区后的状态，只是撤销了最近的这次修改，如图示意：<br><img src="http://upload-images.jianshu.io/upload_images/4760143-43418ba7fbca7042.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><strong>注意：命令<code>git checkout -- aa.txt</code>中的 <code>--</code>很重要，没有的话，那么命令就变成了创建分支</strong></li>
+</ol>
+</li>
+<li><p>删除文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm &lt;你要删除的文件&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>只要没有commit之前，都可以通过<code>git checkout -- a.txt</code> 来恢复</p>
+<h3 id="github的操作"><a href="#github的操作" class="headerlink" title="github的操作"></a>github的操作</h3><ol>
+<li>注册github账号</li>
+<li><p>创建SSH KEY （位于户目录 /. ssh / id_rsa和id_rsa.pub这两个文件）没有可以通过以下命令创建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;你的邮箱地址&quot;</div></pre></td></tr></table></figure>
+</li>
+<li><p>将本地仓库推上github</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git remote add origin &lt;你的github项目地址&gt;</div><div class="line">git push -u origin master //将本地仓库的master分支推送到远程仓库</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>第一次推送master分支，要加上<code>-u</code>，git不但是把master分支推送上了远程新的master上，还会把本的master分支和远程的master分支关联起来，以后推送拉去就可以简化命令</p>
+<ol>
+<li><p>从远程库克隆</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone &lt;要克隆项目的地址&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看远程库的信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git remote //查看远程库信息</div><div class="line">git remote -v  //详细信息</div></pre></td></tr></table></figure>
+</li>
+<li><p>把本地分支内容推送至远程库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin &lt;分支名称&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建远程的分支到本地来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b dev origin/dev</div></pre></td></tr></table></figure>
+</li>
+<li><p>设置本地的dev分支与远程的origin/dev分支的链接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch --set-upstream dev origin/dev</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h3><ol>
+<li><p>创建分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch dev //创建dev分支</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch  //会列出所有的分支，当前分支前面会家一颗星</div></pre></td></tr></table></figure>
+</li>
+<li><p>切换分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout dev //切换到dev分支</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建分支并且切换分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b dev //创建并切换分支</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>相当于这两步操作<code>git branch dev``git checkout dev</code></p>
+<ol>
+<li><p>合并分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git merge dev //在非dev分支上合并dev分支</div></pre></td></tr></table></figure>
+</li>
+<li><p>删除分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch -d dev</div></pre></td></tr></table></figure>
+</li>
+<li><p>解绝冲突问题</p>
+</li>
+</ol>
+<p><img src="http://upload-images.jianshu.io/upload_images/4760143-e205edb3e37fd393.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4760143-e5ec6f67acf569a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4760143-7dcc7349aa347772.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4760143-8133392071f7c92e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="4.png"></p>
+<p>8.分支管理策略</p>
+<blockquote>
+<p>首先master主分支应该是非常稳定的，也就是用来发布新版本，一般情况下不允许在上面干活，干活一般情况下在新建的dev分支上干活，干完后，比如上要发布，或者说dev分支代码稳定后可以合并到主分支master上来。</p>
+</blockquote>
+<h3 id="BUG分支"><a href="#BUG分支" class="headerlink" title="BUG分支"></a>BUG分支</h3><p><img src="http://upload-images.jianshu.io/upload_images/4760143-763a2b7b5ebbb05c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="01.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4760143-33297d1356862f42.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="02.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4760143-f0a7e545ad1ede8c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="03.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4760143-b571b420f11deee4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="04.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4760143-a4dcf05afcd9bcd3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="05.png"></p>
+<h3 id="Git其他命令"><a href="#Git其他命令" class="headerlink" title="Git其他命令"></a>Git其他命令</h3><ol>
+<li>创建空目录</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir &lt;目录名&gt;</div></pre></td></tr></table></figure>
+<ol>
+<li>显示当前路径</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pwd</div><div class="line">`</div></pre></td></tr></table></figure>]]></content:encoded>
+      
+      <comments>https://oldboyyyy.github.io/2017/03/13/git/#disqus_thread</comments>
+    </item>
+    
+  </channel>
+</rss>
