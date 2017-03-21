@@ -8,8 +8,35 @@
     <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>小白的大牛梦！</description>
-    <pubDate>Sat, 18 Mar 2017 12:54:42 GMT</pubDate>
+    <pubDate>Tue, 21 Mar 2017 15:20:44 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Vue实例</title>
+      <link>https://oldboyyyy.github.io/2017/03/21/vue-1/</link>
+      <guid>https://oldboyyyy.github.io/2017/03/21/vue-1/</guid>
+      <pubDate>Tue, 21 Mar 2017 14:53:16 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;之前学过Vue的官方文档，因为项目中没有用过，很快就忘记得差不多了，所以这次决定重新学习一下，并且记录下自己的学习过程以及自己的想法&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;构造器&quot;&gt;&lt;a href=&quot;#构造器&quot; class=&quot;headerlink&quot; title=&quot;构造器&quot;&gt;&lt;/a&gt;构造器&lt;/h3&gt;&lt;p&gt;每一个Vue.js应用都是通过构造函数Vue创建的一个Vue的根实例启动的。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;var data = &amp;#123;a: 1&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var vm = new Vue(&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    el: &amp;apos;#app&amp;apos;, //挂载对象&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    data: data //代理的数据&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p><strong>之前学过Vue的官方文档，因为项目中没有用过，很快就忘记得差不多了，所以这次决定重新学习一下，并且记录下自己的学习过程以及自己的想法</strong></p>
+<h3 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h3><p>每一个Vue.js应用都是通过构造函数Vue创建的一个Vue的根实例启动的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var data = &#123;a: 1&#125;;</div><div class="line">var vm = new Vue(&#123;</div><div class="line">    el: &apos;#app&apos;, //挂载对象</div><div class="line">    data: data //代理的数据</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h3 id="属性与方法"><a href="#属性与方法" class="headerlink" title="属性与方法"></a>属性与方法</h3><p>每一个Vue实例都会代理其<code>data</code>对象里面的所以属性，注意这时代理的<code>data</code>的属性是响应的。如果实例创建以后，添加新的属性到实例上，它不会触发视图更新（后面会详细讨论）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var data = &#123;a: 1&#125;;</div><div class="line">var vm = new Vue(&#123;</div><div class="line">    el: &apos;#app&apos;,</div><div class="line">    data: data</div><div class="line">&#125;);</div><div class="line">vm.a === data.a;//true</div><div class="line">//修改vm的a的值会影响到原始值</div><div class="line">vm.a = 2;</div><div class="line">console.log(data.a); //=&gt; 2</div><div class="line">//反之亦然</div><div class="line">data.a = 3;</div><div class="line">console.log(vm.a);// =&gt; 3</div></pre></td></tr></table></figure></p>
+<p>除了data属性，Vue还暴露了一些有用的实例属性与方法。这些方法与属性都是以$开头，以便于代理的data属性区分<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">console.log(vm.$data === data); //true</div><div class="line">console.log(vm.$el === document.getElementById(&apos;app&apos;)); //true</div><div class="line"></div><div class="line">vm.$watch(&apos;a&apos;, function(newVal, oldVal)&#123;</div><div class="line">    console.log(&apos;a改变了，新值是&apos;+ newVal +&apos;，旧值是&apos;+ oldVal);</div><div class="line">&#125;);</div><div class="line">vm.a = &apos;a&apos;; //a的值变了，就会触发上面的回调函数</div><div class="line">//a改变了，新值是a，旧值是3</div></pre></td></tr></table></figure></p>
+<h3 id="实例的生命周期"><a href="#实例的生命周期" class="headerlink" title="实例的生命周期"></a>实例的生命周期</h3><blockquote>
+<p>每一个Vue实例在被创建的之前都要经过一些列的初始化的过程;<br>例如实例需要配备数据观测，模板编译，挂载实例到DOM，然后数据变化到Dom,在这过程中，会调用一系列的生命周期的钩子函数，这就提供了给我们执行自定义逻辑的机会.</p>
+</blockquote>
+<h3 id="生命周期图示"><a href="#生命周期图示" class="headerlink" title="生命周期图示"></a>生命周期图示</h3><p><img src="http://upload-images.jianshu.io/upload_images/4760143-c1d266fca1e6135d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<h3 id="API地址"><a href="#API地址" class="headerlink" title="API地址"></a>API地址</h3><p><a href="https://cn.vuejs.org/v2/guide/instance.html" target="_blank" rel="external">Vue 中文API</a></p>
+]]></content:encoded>
+      
+      <comments>https://oldboyyyy.github.io/2017/03/21/vue-1/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>webpack起步</title>
