@@ -8,7 +8,7 @@
     <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>小白的大牛梦！</description>
-    <pubDate>Tue, 21 Mar 2017 15:20:44 GMT</pubDate>
+    <pubDate>Tue, 21 Mar 2017 15:23:33 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -31,7 +31,7 @@
 <h3 id="实例的生命周期"><a href="#实例的生命周期" class="headerlink" title="实例的生命周期"></a>实例的生命周期</h3><blockquote>
 <p>每一个Vue实例在被创建的之前都要经过一些列的初始化的过程;<br>例如实例需要配备数据观测，模板编译，挂载实例到DOM，然后数据变化到Dom,在这过程中，会调用一系列的生命周期的钩子函数，这就提供了给我们执行自定义逻辑的机会.</p>
 </blockquote>
-<h3 id="生命周期图示"><a href="#生命周期图示" class="headerlink" title="生命周期图示"></a>生命周期图示</h3><p><img src="http://upload-images.jianshu.io/upload_images/4760143-c1d266fca1e6135d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<h3 id="生命周期图示"><a href="#生命周期图示" class="headerlink" title="生命周期图示"></a>生命周期图示</h3><p>盗用官方文档的图：<br><img src="http://upload-images.jianshu.io/upload_images/4760143-c1d266fca1e6135d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <h3 id="API地址"><a href="#API地址" class="headerlink" title="API地址"></a>API地址</h3><p><a href="https://cn.vuejs.org/v2/guide/instance.html" target="_blank" rel="external">Vue 中文API</a></p>
 ]]></content:encoded>
       
