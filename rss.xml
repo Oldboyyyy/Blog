@@ -8,8 +8,42 @@
     <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>小白的大牛梦！</description>
-    <pubDate>Wed, 22 Mar 2017 15:14:08 GMT</pubDate>
+    <pubDate>Sun, 26 Mar 2017 10:18:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>计算属性 computed</title>
+      <link>https://oldboyyyy.github.io/2017/03/26/vue-3/</link>
+      <guid>https://oldboyyyy.github.io/2017/03/26/vue-3/</guid>
+      <pubDate>Sun, 26 Mar 2017 10:16:28 GMT</pubDate>
+      <description>
+      
+        &lt;blockquote&gt;
+&lt;p&gt;模板表达式是非常的便利，也可以进行简单的运算，但是面对较为复杂的运算，就会让模板变得那已维护。面对相对复杂的运算应该选用计算属性来处理&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;简单的例子&quot;&gt;&lt;a href=&quot;#简单的例子&quot; class=&quot;headerlink&quot; title=&quot;简单的例子&quot;&gt;&lt;/a&gt;简单的例子&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;p&amp;gt;&amp;#123;&amp;#123;msg&amp;#125;&amp;#125;&amp;lt;/p&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;p&amp;gt;computed:&amp;#123;&amp;#123;reverseMsg&amp;#125;&amp;#125;&amp;lt;/p&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;script&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var vm = new Vue(&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;       el: &amp;apos;#app&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;       data: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;           msg: &amp;apos;hello Vue!&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;       &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;       computed: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;           reverseMsg: function()&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                return this.msg.split(&amp;apos; &amp;apos;).reverse().join(&amp;apos; &amp;apos;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;           &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;       &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/script&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<blockquote>
+<p>模板表达式是非常的便利，也可以进行简单的运算，但是面对较为复杂的运算，就会让模板变得那已维护。面对相对复杂的运算应该选用计算属性来处理</p>
+</blockquote>
+<h3 id="简单的例子"><a href="#简单的例子" class="headerlink" title="简单的例子"></a>简单的例子</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line">    &lt;p&gt;&#123;&#123;msg&#125;&#125;&lt;/p&gt;</div><div class="line">    &lt;p&gt;computed:&#123;&#123;reverseMsg&#125;&#125;&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">var vm = new Vue(&#123;</div><div class="line">       el: &apos;#app&apos;,</div><div class="line">       data: &#123;</div><div class="line">           msg: &apos;hello Vue!&apos;</div><div class="line">       &#125;,</div><div class="line">       computed: &#123;</div><div class="line">           reverseMsg: function()&#123;</div><div class="line">                return this.msg.split(&apos; &apos;).reverse().join(&apos; &apos;);</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">   &#125;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>结果是：<br><img src="http://upload-images.jianshu.io/upload_images/4760143-43fd328d84eaea99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="结果"><br>我们先声明一个计算属性<code>reverseMsg</code>。我们提供的函数将作为<code>vm.reverseMsg</code>的<code>getter</code>；<br><code>vm.reverseMsg</code>的值是取决于<code>vm.message</code>的值。<br><code>Vue</code>知道<code>vm.reverseMsg</code>的值是依赖于<code>vm.msg</code>，因此当<code>vm.msg</code>发生改变时，所有依赖于<code>vm.reverseMsg</code>的绑定也会更新。</p>
+<h3 id="计算缓存-VS-Methods"><a href="#计算缓存-VS-Methods" class="headerlink" title="计算缓存 VS Methods"></a>计算缓存 VS Methods</h3><p>我们也可以通过利用<code>Methods</code>来达到同样的效果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;methods:&#123;&#123;reverseMsgfn()&#125;&#125;&lt;/p&gt;</div><div class="line"></div><div class="line">... //其他的代码省略</div><div class="line">methods: &#123;</div><div class="line">           reverseMsgfn: function()&#123;</div><div class="line">               return this.msg.split(&apos; &apos;).reverse().join(&apos; &apos;);</div><div class="line">           &#125;</div><div class="line">       &#125;</div></pre></td></tr></table></figure></p>
+<p>结果：<br><img src="http://upload-images.jianshu.io/upload_images/4760143-91bcb9fd29d45fa7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Methods的结果"><br>最终的结果都是一样的，不同的是<code>计算属性</code>是基于他们的依赖进行缓存的;<code>计算属性</code>只有在他的相关依赖发生改变时才会重新求值；这就意味着，在<code>msg</code>值没有发生改变，<code>reverseMsg</code>的值就不会发生改变，这期间多次访问<code>reverseMsg</code>属性都是之前的的计算结果，而是不值再次进行执行函数;如果我们不需要缓存的话，我们就可以用<code>method</code>代替。</p>
+<h3 id="计算属性-VS-Watch属性"><a href="#计算属性-VS-Watch属性" class="headerlink" title="计算属性 VS Watch属性"></a>计算属性 VS Watch属性</h3><p><code>Vue</code>提供了一种方式来观察和响应Vue实例上的数据变动：<code>watch</code>属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line">     &lt;label for=&quot;&quot;&gt;firstName:&lt;input type=&quot;text&quot; v-model=&apos;firstName&apos;&gt;&lt;/label&gt;</div><div class="line">     &lt;label for=&quot;&quot;&gt;lastName:&lt;input type=&quot;text&quot; v-model=&apos;lastName&apos;&gt;&lt;/label&gt;</div><div class="line">     &lt;p&gt;fullName:&#123;&#123;fullName&#125;&#125;&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">...//其他代码省略</div><div class="line">watch: &#123;</div><div class="line">       firstName: function(val)&#123;</div><div class="line">             this.fullName = val + &apos; &apos; + this.lastName;</div><div class="line">       &#125;,</div><div class="line">       lastName: function(val)&#123;</div><div class="line">             this.fullName = this.firstName + &apos; &apos; + val;</div><div class="line">       &#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<p>下面使用<code>computed</code>实现的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line">     &lt;label for=&quot;&quot;&gt;firstName:&lt;input type=&quot;text&quot; v-model=&apos;firstName&apos;&gt;&lt;/label&gt;</div><div class="line">     &lt;label for=&quot;&quot;&gt;lastName:&lt;input type=&quot;text&quot; v-model=&apos;lastName&apos;&gt;&lt;/label&gt;</div><div class="line">     &lt;p&gt;fullName:&#123;&#123;fullName&#125;&#125;&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">...//其他代码省略</div><div class="line">computed: &#123;</div><div class="line">        fullName : &#123;</div><div class="line">                get: function()&#123;</div><div class="line">                    return this.firstName +&apos; &apos;+ this.lastName;</div><div class="line">                 &#125;,</div><div class="line">               set: function(newVal)&#123;</div><div class="line">                    var names = newVal.split(&apos; &apos;);</div><div class="line">                    this.firstName =  names[0];</div><div class="line">                    this.lastName = names[names.length - 1];</div><div class="line">                &#125; </div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4760143-ce338fd65a9a3ac7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="watch和computed结果"><br><code>computed</code>也可以实现相同的效果，而且代码更加简洁易懂<br>计算属性，一般默认只有getter，不过我们也可以提供一个setter,我们就可以通改变<code>fullName</code>值，也可以动态改变<code>firstName</code>和<code>lastName</code>。</p>
+<h3 id="观察者-Watchers"><a href="#观察者-Watchers" class="headerlink" title="观察者 Watchers"></a>观察者 Watchers</h3><p>虽然计算属性在大多数情况下是可以替代<code>watch</code>的，但是在执行异步操作或者更大开销操作的时候<code>watch</code>更适合;</p>
+<p><code>watch</code>选项允许我们执行异步操作，限制我们操作的频率并在得到结果前设置中间状态，这是计算属性无法做到的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;app3&quot;&gt;</div><div class="line">    你的问题是：&lt;input type=&quot;text&quot; v-model=&quot;question&quot;&gt;</div><div class="line">    答案是：&lt;p v-text=&quot;answer&quot;&gt;&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script src=&quot;https://unpkg.com/axios@0.12.0/dist/axios.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script src=&quot;https://unpkg.com/lodash@4.13.1/lodash.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    new Vue(&#123;</div><div class="line">        el: &apos;#app3&apos;,</div><div class="line">        data: &#123;</div><div class="line">            question: &apos;&apos;,</div><div class="line">            answer: &apos;你不提问我没法回答&apos;</div><div class="line">        &#125;,</div><div class="line">        watch: &#123;</div><div class="line">            question: function()&#123;</div><div class="line">                this.answer = &apos;问题通常包含一个问号&apos;;</div><div class="line">                this.getAnswer();</div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        methods: &#123;</div><div class="line">            getAnswer: _.debounce(function () &#123;</div><div class="line">                var _this = this;</div><div class="line">                if(_this.question.indexOf(&apos;?&apos;) === -1)&#123;</div><div class="line">                    return _this.answer = &apos;问题通常包含一个问号&apos;;</div><div class="line">                &#125;</div><div class="line">                _this.answer = &apos;搜索中...&apos;;</div><div class="line">                axios.get(&apos;https://yesno.wtf/api&apos;).then(function(response)&#123;</div><div class="line">                    _this.answer = _.capitalize(response.data.answer);</div><div class="line">                &#125;).catch(function(err)&#123;</div><div class="line">                    _this.answer = &apos;err&apos;</div><div class="line">                &#125;)</div><div class="line">            &#125;,500)</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;);</div><div class="line">    </div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4760143-8ad85a5a26640e05.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="实例结果"></p>
+<h3 id="官方API"><a href="#官方API" class="headerlink" title="官方API"></a>官方API</h3><p><a href="https://cn.vuejs.org/v2/guide/computed.html#计算缓存-vs-Methods" target="_blank" rel="external">Vue</a></p>
+]]></content:encoded>
+      
+      <comments>https://oldboyyyy.github.io/2017/03/26/vue-3/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>模板语法</title>
@@ -427,160 +461,6 @@
 ]]></content:encoded>
       
       <comments>https://oldboyyyy.github.io/2017/03/14/reg/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Git常用命令记录</title>
-      <link>https://oldboyyyy.github.io/2017/03/13/git/</link>
-      <guid>https://oldboyyyy.github.io/2017/03/13/git/</guid>
-      <pubDate>Mon, 13 Mar 2017 12:43:40 GMT</pubDate>
-      <description>
-      
-        &lt;blockquote&gt;
-&lt;p&gt;记录常用的git操作命令&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;创建提交版本库&quot;&gt;&lt;a href=&quot;#创建提交版本库&quot; class=&quot;headerlink&quot; title=&quot;创建提交版本库&quot;&gt;&lt;/a&gt;创建提交版本库&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;创建版本库&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git init&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;将文件添加到暂存区里面去&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git add &amp;lt;文件名或文件夹&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;git add -A  //提交所有变化&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;git add -u //提交被修改的和被删除的文件，不包括新文件&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;git add . //提交新文件和被修改的文件，不包括被删除的文件&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-      
-      </description>
-      
-      <content:encoded><![CDATA[<blockquote>
-<p>记录常用的git操作命令</p>
-</blockquote>
-<h3 id="创建提交版本库"><a href="#创建提交版本库" class="headerlink" title="创建提交版本库"></a>创建提交版本库</h3><ol>
-<li><p>创建版本库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init</div></pre></td></tr></table></figure>
-</li>
-<li><p>将文件添加到暂存区里面去</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git add &lt;文件名或文件夹&gt;</div><div class="line">git add -A  //提交所有变化</div><div class="line">git add -u //提交被修改的和被删除的文件，不包括新文件</div><div class="line">git add . //提交新文件和被修改的文件，不包括被删除的文件</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<a id="more"></a>
-<ol>
-<li><p>把暂存区的文件提交到仓库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit -m &apos;这次提交的备注&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>查看文件是否还有未提交</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git status</div></pre></td></tr></table></figure>
-</li>
-<li><p>查看文件具体修改了哪些内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git diff &lt;要查看的文件名称&gt;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ol>
-<li><p>查看修改文件的修改记录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git log //内容信息比较丰富</div><div class="line">git log --pretty=oneline //将信息集中到一行，去除了一些信息</div></pre></td></tr></table></figure>
-</li>
-<li><p>版本回退操作</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git reset --hard HEAD^ //回退上一个版本</div><div class="line">git reset --hard HEAD^^ //回退上上一个版本，以此类推，如果回退100个版本，就很麻烦</div><div class="line">git reset --hard HEAD~100 // 也可以这样来操作</div></pre></td></tr></table></figure>
-</li>
-<li><p>通过命令查看文件内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat &lt;文件名称&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>查看内容的版本号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git reflog</div><div class="line">git rest --hard &lt;你想回退的版本号&gt;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="撤销修改和删除文件"><a href="#撤销修改和删除文件" class="headerlink" title="撤销修改和删除文件"></a>撤销修改和删除文件</h3><ol>
-<li><p>未提交之前发现有错误，要恢复以前版本</p>
-<ul>
-<li>手动修改错误文件，重新add到暂存区</li>
-<li>使用<code>git reset --hard HEAD^</code>恢复上一个版本</li>
-<li>使用撤销命令操作，如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -- &lt;文件名&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><code>git checkout</code>把文件在工作区的修改全部撤销，这里有两种情况，如下：</p>
-<ol>
-<li>文件自动修改以后，还没放到暂存区，使用撤销修改就回到和版本库一模一样的状态。</li>
-<li>另一种，文件修改以后并且也已经放入暂存区，接着又作了修改，撤销修改就回到了添加暂存区后的状态，只是撤销了最近的这次修改，如图示意：<br><img src="http://upload-images.jianshu.io/upload_images/4760143-43418ba7fbca7042.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><strong>注意：命令<code>git checkout -- aa.txt</code>中的 <code>--</code>很重要，没有的话，那么命令就变成了创建分支</strong></li>
-</ol>
-</li>
-<li><p>删除文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm &lt;你要删除的文件&gt;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>只要没有commit之前，都可以通过<code>git checkout -- a.txt</code> 来恢复</p>
-<h3 id="github的操作"><a href="#github的操作" class="headerlink" title="github的操作"></a>github的操作</h3><ol>
-<li>注册github账号</li>
-<li><p>创建SSH KEY （位于户目录 /. ssh / id_rsa和id_rsa.pub这两个文件）没有可以通过以下命令创建</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;你的邮箱地址&quot;</div></pre></td></tr></table></figure>
-</li>
-<li><p>将本地仓库推上github</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git remote add origin &lt;你的github项目地址&gt;</div><div class="line">git push -u origin master //将本地仓库的master分支推送到远程仓库</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>第一次推送master分支，要加上<code>-u</code>，git不但是把master分支推送上了远程新的master上，还会把本的master分支和远程的master分支关联起来，以后推送拉去就可以简化命令</p>
-<ol>
-<li><p>从远程库克隆</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone &lt;要克隆项目的地址&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>查看远程库的信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git remote //查看远程库信息</div><div class="line">git remote -v  //详细信息</div></pre></td></tr></table></figure>
-</li>
-<li><p>把本地分支内容推送至远程库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin &lt;分支名称&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>创建远程的分支到本地来</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b dev origin/dev</div></pre></td></tr></table></figure>
-</li>
-<li><p>设置本地的dev分支与远程的origin/dev分支的链接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch --set-upstream dev origin/dev</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h3><ol>
-<li><p>创建分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch dev //创建dev分支</div></pre></td></tr></table></figure>
-</li>
-<li><p>查看分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch  //会列出所有的分支，当前分支前面会家一颗星</div></pre></td></tr></table></figure>
-</li>
-<li><p>切换分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout dev //切换到dev分支</div></pre></td></tr></table></figure>
-</li>
-<li><p>创建分支并且切换分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b dev //创建并切换分支</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>相当于这两步操作<code>git branch dev``git checkout dev</code></p>
-<ol>
-<li><p>合并分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git merge dev //在非dev分支上合并dev分支</div></pre></td></tr></table></figure>
-</li>
-<li><p>删除分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch -d dev</div></pre></td></tr></table></figure>
-</li>
-<li><p>解绝冲突问题</p>
-</li>
-</ol>
-<p><img src="http://upload-images.jianshu.io/upload_images/4760143-e205edb3e37fd393.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4760143-e5ec6f67acf569a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4760143-7dcc7349aa347772.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4760143-8133392071f7c92e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="4.png"></p>
-<p>8.分支管理策略</p>
-<blockquote>
-<p>首先master主分支应该是非常稳定的，也就是用来发布新版本，一般情况下不允许在上面干活，干活一般情况下在新建的dev分支上干活，干完后，比如上要发布，或者说dev分支代码稳定后可以合并到主分支master上来。</p>
-</blockquote>
-<h3 id="BUG分支"><a href="#BUG分支" class="headerlink" title="BUG分支"></a>BUG分支</h3><p><img src="http://upload-images.jianshu.io/upload_images/4760143-763a2b7b5ebbb05c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="01.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4760143-33297d1356862f42.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="02.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4760143-f0a7e545ad1ede8c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="03.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4760143-b571b420f11deee4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="04.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4760143-a4dcf05afcd9bcd3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="05.png"></p>
-<h3 id="Git其他命令"><a href="#Git其他命令" class="headerlink" title="Git其他命令"></a>Git其他命令</h3><ol>
-<li>创建空目录</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir &lt;目录名&gt;</div></pre></td></tr></table></figure>
-<ol>
-<li>显示当前路径</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pwd</div><div class="line">`</div></pre></td></tr></table></figure>]]></content:encoded>
-      
-      <comments>https://oldboyyyy.github.io/2017/03/13/git/#disqus_thread</comments>
     </item>
     
   </channel>
