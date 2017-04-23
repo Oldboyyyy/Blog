@@ -28,7 +28,7 @@ copyright: true
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -93,19 +93,19 @@ font:
   global:
     # external: true will load this font family from host.
     external: true
-    family: Lato
+    family: monospace
 
   # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
   # Fallback to `global` font settings.
   headings:
     external: true
-    family:
+    family: 
 
   # Font settings for posts
   # Fallback to `global` font settings.
   posts:
     external: true
-    family:
+    family: 
 
   # Font settings for Logo
   # Fallback to `global` font settings.
@@ -132,8 +132,10 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
-  #LinkLabel: Link
+social:
+  Github: https://github.com/Oldboyyyy
+  简书: http://www.jianshu.com/u/7cd921c81414
+  新浪微博: http://weibo.com/u/1802521051?from=hissimilar_home
 
 
 # Social Links Icons
@@ -145,9 +147,9 @@ social_icons:
   enable: true
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
-  GitHub: github
-  Twitter: twitter
-  Weibo: weibo
+  Github: github 
+  简书: book
+  新浪微博: weibo
 
 
 # Sidebar Avatar
@@ -458,7 +460,7 @@ use_motion: true
 fancybox: true
 
 # Canvas-nest
-canvas_nest: false
+canvas_nest: true
 
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.
@@ -509,7 +511,7 @@ vendors:
 
   # Internal version: 1.0.0
   # https://github.com/hustcc/canvas-nest.js
-  canvas_nest:
+  canvas_nest: 
 
 
 

@@ -4,11 +4,11 @@
 
 # Site
 title: YC Blog
-subtitle:
+subtitle: 来日方长
 description: 小白的大牛梦！
 author: Oldboyyyy
 language: zh-Hans
-timezone:
+timezone: 
 avatar: /images/tx.jpg
 duoshuo_shortname: oldboyyyy 
 
@@ -73,3 +73,11 @@ deploy:
   type: git
   repo: https://github.com/Oldboyyyy/Oldboyyyy.github.io.git
   branch: master
+  
+# 设置RSS
+feed:
+    type: rss2
+    path: rss.xml
+    limit: 5
+    hub:
+    content: 'true'

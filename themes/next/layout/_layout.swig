@@ -9,6 +9,10 @@
 <head>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
+
+  {% if theme.canvas_nest %}
+    <script color="40,189,255" opacity='0.7' zIndex="-2" count="100" type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  {% endif %}
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
@@ -43,7 +47,7 @@
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner">
+      <div class="footer-inner" style="text-align:center">
         {% include '_partials/footer.swig' %}
         {% include '_scripts/third-party/analytics/busuanzi-counter.swig' %}
         {% block footer %}{% endblock %}
@@ -82,6 +86,5 @@
   {% if theme.exturl %}
     {% include '_scripts/third-party/exturl.swig' %}
   {% endif %}
-
 </body>
 </html>
